@@ -1,0 +1,17 @@
+@keyframes nav-hover {
+  from {
+    top: 10px;
+  }
+  to {
+    top: -5px;
+  }
+}
+
+@keyframes nav-hover-reversed {
+  from {
+    top: -5px;
+  }
+  to {
+    top: 10px;
+  }
+}

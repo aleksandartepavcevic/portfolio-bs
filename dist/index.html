@@ -15,15 +15,39 @@
   </head>
   <body>
     <!-- Home -->
-    <div class="home">
-      <div class="row container">
-        <div class="col"></div>
-      </div>
-      <div class="row container">
-        <div class="col-md-8"></div>
+    <section class="home">
+      <header class="home__header row container m-auto">
+        <nav class="col d-flex">
+          <div class="col-md-8">
+            <a href="#"><img src="./images/Logo.svg" alt="logo-icon" /></a>
+          </div>
+          <div class="col-sm-4 d-flex">
+            <ul class="home__nav-links">
+              <li><a href="#">about me</a></li>
+              <li><a href="#">workflow</a></li>
+              <li><a href="#">projects</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="home__section row container m-auto">
+        <div class="col-md-8 d-flex flex-column justify-content-between">
+          <h1 class="home__heading">aleksandar<br />tepavčević.</h1>
+          <div class="social-links">
+            <a href="#"
+              ><img src="./images/github-icon.svg" alt="github-icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/instagram-icon.svg" alt="instagram-icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/linkedin-icon.svg" alt="linkedin-icon"
+            /></a>
+          </div>
+        </div>
         <div class="col-sm-4"></div>
       </div>
-    </div>
+    </section>
     <script src="./index.js"></script>
   </body>
 </html>

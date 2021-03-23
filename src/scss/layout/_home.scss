@@ -1,4 +1,21 @@
 .home {
+  padding: 20rem 0;
   height: 100vh;
-  background: radial-gradient(100% 100% at 50% 0%, #464a5a 0%, #252734 100%);
+  background: $gradient-first;
+
+  &__header {
+    height: 20%;
+  }
+
+  &__nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  &__section {
+    height: 80%;
+  }
 }
