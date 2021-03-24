@@ -10,6 +10,10 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/182fea3d70.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Aleksandar Tepavčević</title>
   </head>
@@ -32,21 +36,37 @@
       </header>
       <div class="home__section row container m-auto">
         <div class="col-md-8 d-flex flex-column justify-content-between">
-          <h1 class="home__heading">aleksandar<br />tepavčević.</h1>
-          <div class="social-links">
+          <h1 class="home__name-text">aleksandar<br />tepavčević.</h1>
+          <div class="home__social-links">
             <a href="#"
-              ><img src="./images/github-icon.svg" alt="github-icon"
-            /></a>
+              ><i class="home__icon home__icon--github fab fa-github fa-2x"></i></a>
             <a href="#"
-              ><img src="./images/instagram-icon.svg" alt="instagram-icon"
-            /></a>
+              ><i class="home__icon home__icon--instagram fab fa-instagram fa-2x"></i></a>
             <a href="#"
-              ><img src="./images/linkedin-icon.svg" alt="linkedin-icon"
-            /></a>
+              ><i class="home__icon home__icon--linkedin fab fa-linkedin-in fa-2x"></i></a>
           </div>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4 d-flex flex-column justify-content-between p-0">
+          <div>
+            <h2 class="minor-heading">-Introduction</h2>
+            <h1 class="heading">
+              Web Developer and Designer , based in Serbia.
+            </h1>
+            <p class="paragraph">
+              Hey , I’m a self-taught front-end web developer and designer.
+              Let’s work together.
+            </p>
+          </div>
+          <div>
+            <a href="#" class="cta"
+              >Let's talk <i class="far fa-hand-point-right"></i></i
+            ></a>
+          </div>
+        </div>
+      
+      
       </div>
+      <div class="home__hero container"><img src="./images/hero.svg" alt="hero"></div>
     </section>
     <script src="./index.js"></script>
   </body>

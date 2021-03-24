@@ -17,5 +17,26 @@
 
   &__section {
     height: 80%;
+    padding-top: 10rem;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__social-links {
+    a {
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__hero {
+    img {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-65%, 0);
+    }
   }
 }
