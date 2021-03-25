@@ -1,0 +1,45 @@
+.footer {
+  padding: 20rem 0;
+  background: $gradient-footer;
+  height: 100vh;
+
+  @media screen and (max-width: 991px) {
+    padding: 10rem 0;
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 5rem 0;
+    height: unset;
+  }
+
+  &__form {
+    input,
+    textarea {
+      width: 100%;
+      background: transparent;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid hsla(0, 0%, 95%, 0.2);
+    }
+
+    input {
+      margin-bottom: 3rem;
+    }
+
+    textarea {
+      resize: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+    }
+  }
+}

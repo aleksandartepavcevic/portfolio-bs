@@ -3,10 +3,25 @@
   background: $dark-blue;
   position: relative;
 
+  @media screen and (max-width: 425px) {
+    padding: 10rem 0 25rem 0;
+  }
+
+  &__technologies {
+    @media screen and (max-width: 991px) {
+      margin-top: 10rem;
+      text-align: left;
+    }
+  }
+
   &__cards {
     position: absolute;
     bottom: -17rem;
     left: 50%;
     transform: translate(-50%, 0);
+
+    @media screen and (max-width: 425px) {
+      visibility: hidden;
+    }
   }
 }

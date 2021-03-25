@@ -4,12 +4,20 @@
   font-family: 'Poppins';
   color: $white;
 
+  @media screen and (max-width: 425px) {
+    font-size: $medium;
+  }
+
   span {
     color: $orange;
   }
 
   &--home {
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 425px) {
+      font-size: $medium;
+    }
   }
 
   &--about-me {
@@ -20,6 +28,16 @@
   &--technologies {
     font-size: $medium;
     text-align: center;
+    padding: 0 2rem;
+
+    @media screen and (max-width: 991px) {
+      text-align: left;
+      padding: 0 0.5rem;
+    }
+  }
+
+  &--footer {
+    margin-bottom: 5rem;
   }
 }
 
@@ -30,6 +48,10 @@
   font-family: 'Poppins';
   color: $white;
   opacity: 0.5;
+
+  @media screen and (max-width: 425px) {
+    font-size: $small;
+  }
 }
 
 .paragraph {
@@ -41,6 +63,15 @@
 
   &--about-me {
     margin-bottom: 5rem;
+  }
+
+  &--footer {
+    opacity: 1;
+    margin: 1.5rem 0;
+
+    strong {
+      font-weight: 500;
+    }
   }
 }
 
@@ -168,10 +199,18 @@
 
   &__name-text {
     color: $white;
-    font-size: $large;
+    font-size: $extra-large;
     font-weight: 700;
     font-family: 'Poppins';
     position: relative;
+
+    @media screen and (max-width: 500px) {
+      font-size: $large;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: $medium-large;
+    }
 
     &::after {
       content: '';
@@ -181,6 +220,10 @@
       position: absolute;
       left: 2px;
       bottom: -40px;
+
+      @media screen and (max-width: 991px) {
+        height: 5px;
+      }
     }
   }
 }
@@ -287,5 +330,41 @@
     .fas {
       margin-right: 2.5rem;
     }
+  }
+}
+
+.footer {
+  input,
+  textarea {
+    color: $white;
+    font-size: $small;
+    font-weight: 400;
+    font-family: 'Poppins';
+    resize: none;
+
+    &::-webkit-input-placeholder {
+      color: $white;
+      font-weight: 300;
+    }
+
+    &::-moz-placeholder {
+      color: $white;
+      font-weight: 300;
+    }
+
+    &:-moz-placeholder {
+      color: $white;
+      font-weight: 300;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white;
+      font-weight: 300;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
   }
 }

@@ -1,10 +1,36 @@
 .home {
   padding: 20rem 0;
   height: 100vh;
-  background: $gradient-first;
+  background: $gradient-home;
+
+  @media screen and (max-width: 991px) {
+    padding: 10rem 0;
+  }
+
+  @media screen and (max-width: 425px) {
+    padding: 2rem 0 15rem 0;
+  }
 
   &__header {
     height: 20%;
+  }
+
+  &__nav {
+    .fa-bars {
+      display: none;
+      font-size: $medium;
+      color: $white;
+      padding-top: 1rem;
+
+      @media screen and (max-width: 1200px) {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &__nav-links {
@@ -13,6 +39,10 @@
     justify-content: space-between;
     margin: 0;
     padding: 1rem 0;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
   }
 
   &__section {
@@ -28,15 +58,33 @@
         margin-right: 2rem;
       }
     }
+
+    &--home {
+      display: block;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+    }
   }
 
   &__hero {
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
     img {
       position: absolute;
-      z-index: 1;
-      bottom: 0;
+      z-index: -1;
+      bottom: -20rem;
       left: 50%;
       transform: translate(-65%, 0);
+
+      @media screen and (max-height: 900px) {
+        height: 700px;
+      }
+
+      @media screen and (max-height: 800px) {
+        height: 600px;
+      }
     }
   }
 }

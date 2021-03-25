@@ -20,26 +20,27 @@
   <body>
     <!-- Home section -->
     <section class="home">
-      <header class="home__header row container m-auto">
-        <nav class="col d-flex">
-          <div class="col-md-8">
+      <div class="home__header row container m-auto">
+        <nav class="col d-flex justify-content-between">
+          <div class="col-sm-8">
             <a href="https://aleksandartepavcevic.github.io/"
               ><img src="./images/Logo.svg" alt="logo-icon"
             /></a>
           </div>
-          <div class="col-sm-4 d-flex">
+          <div class="home__nav col-sm-4">
             <ul class="home__nav-links">
               <li><a href="#">about me</a></li>
               <li><a href="#">workflow</a></li>
               <li><a href="#">projects</a></li>
             </ul>
+            <i class="fas fa-bars"></i>
           </div>
         </nav>
-      </header>
+      </div>
       <div class="home__section row container m-auto">
-        <div class="col-md-8 d-flex flex-column justify-content-between">
+        <div class="col-lg-8 d-flex flex-column justify-content-between">
           <h1 class="home__name-text">aleksandar<br />tepavčević.</h1>
-          <div class="home__social-links">
+          <div class="home__social-links home__social-links--home">
             <a href="https://github.com/aleksandartepavcevic" target="_blank"
               ><i class="home__icon home__icon--github fab fa-github fa-2x"></i
             ></a>
@@ -59,7 +60,7 @@
             ></a>
           </div>
         </div>
-        <div class="col-md-4 d-flex flex-column justify-content-between p-0">
+        <div class="col-lg-4 d-flex flex-column justify-content-between p-0">
           <div>
             <h2 class="minor-heading">-Introduction</h2>
             <h1 class="heading heading--home">
@@ -76,9 +77,9 @@
             ></a>
           </div>
         </div>
-      </div>
-      <div class="home__hero container">
-        <img src="./images/hero.svg" alt="hero" class="img-fluid" />
+        <div class="home__hero container">
+          <img src="./images/hero.svg" alt="hero" class="img-fluid" />
+        </div>
       </div>
     </section>
     <!-- About me section -->
@@ -106,13 +107,13 @@
             <h1 class="heading heading--technologies">Tools & technologies</h1>
           </div>
           <div class="row">
-            <div class="col"><i class="fab fa-html5"></i></div>
-            <div class="col"><i class="fab fa-css3-alt"></i></div>
-            <div class="col"><i class="fab fa-sass"></i></div>
-            <div class="col"><i class="fab fa-js-square"></i></div>
+            <div class="col gy-5""><i class="fab fa-html5"></i></div>
+            <div class="col gy-5""><i class="fab fa-css3-alt"></i></div>
+            <div class="col gy-5""><i class="fab fa-sass"></i></div>
+            <div class="col gy-5""><i class="fab fa-js-square"></i></div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col gy-5"">
               <svg
                 width="36"
                 height="36"
@@ -127,12 +128,12 @@
                 />
               </svg>
             </div>
-            <div class="col"><i class="fab fa-react"></i></div>
-            <div class="col"><i class="fab fa-gulp"></i></div>
-            <div class="col"><i class="fab fa-bootstrap"></i></div>
+            <div class="col gy-5""><i class="fab fa-react"></i></div>
+            <div class="col gy-5""><i class="fab fa-gulp"></i></div>
+            <div class="col gy-5""><i class="fab fa-bootstrap"></i></div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col gy-5"">
               <svg
                 width="36"
                 height="36"
@@ -147,7 +148,7 @@
                 />
               </svg>
             </div>
-            <div class="col">
+            <div class="col gy-5"">
               <svg
                 width="36"
                 height="36"
@@ -195,23 +196,128 @@
             <h1 class="heading">Successful Client Projects.</h1>
             <p class="paragraph">Feel free to check my portfolio</p>
           </div>
-          <div class="projects__fylo row">
+        </div>
+      </div>
+      <div class="row container m-auto">
+        <div class="projects__fylo col-md-6">
+          <a
+            href="https://fylo-dark-theme-landing-page-master-phi.vercel.app/"
+            target="_blank"
+          >
             <div class="projects__name">
               <h1 class="heading">Fylo.</h1>
               <h2 class="minor-heading">- Landing page</h2>
             </div>
-            <img src="./images/fylo-project.png" alt="crowdfund-project" />
+            <img
+              src="./images/fylo-project.png"
+              alt="crowdfund-project"
+              class="img-fluid"
+            />
+          </a>
+        </div>
+        <div class="projects__crowdfund col-md-6 d-flex justify-content-end">
+          <a
+            href="https://crowdfund-rho.vercel.app/"
+            target="_blank"
+            class="projects__crowdfund--absolute"
+          >
+            <div class="projects__name">
+              <h1 class="heading">Crowdfund.</h1>
+              <h2 class="minor-heading">- Landing page</h2>
+            </div>
+            <img
+              src="./images/crowdfund-project.png"
+              alt="crowdfund-project"
+              class="img-fluid"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <section class="footer">
+      <div class="row container m-auto d-flex justify-content-between h-100">
+        <div class="row">
+          <div class="col-md d-flex flex-column justify-content-between">
+            <div>
+              <h1 class="heading heading--footer">Let's talk.</h1>
+              <p class="paragraph">Open for any type of query & discussion.</p>
+            </div>
+            <div>
+              <p class="paragraph">
+                <a href="mailto: atepavcevic29@gmail.com"
+                  >atepavcevic29@gmail.com</a
+                >
+              </p>
+              <p class="paragraph">
+                <a href="tel: +381645114816">+381/64-511-48-16</a>
+              </p>
+            </div>
+          </div>
+          <div class="footer__form col-md">
+            <h1 class="heading heading--footer">
+              Estimate your project? Let me know here.
+            </h1>
+            <form>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="What's your name?"
+              /><br />
+              <input
+                type="text"
+                id="mail"
+                name="mail"
+                placeholder="Your mail goes here."
+              /><br />
+              <textarea
+                name="message"
+                id="form-contact_message"
+                placeholder="What’s your message?"
+                rows="5"
+                required=""
+                class="autosize"
+              ></textarea>
+            </form>
           </div>
         </div>
-        <div class="projects__crowdfund col">
-          <div class="projects__name">
-            <h1 class="heading">Crowdfund.</h1>
-            <h2 class="minor-heading">- Landing page</h2>
+        <div class="row">
+          <div
+            class="col d-flex align-items-center justify-content-end flex-column"
+          >
+            <a href="https://aleksandartepavcevic.github.io/"
+              ><img src="./images/Logo.svg" alt="logo-icon"
+            /></a>
+            <p class="paragraph paragraph--footer">
+              <strong>Thanks for scrolling</strong>, that’s all folks.
+            </p>
+            <div class="home__social-links">
+              <a href="https://github.com/aleksandartepavcevic" target="_blank"
+                ><i
+                  class="home__icon home__icon--github fab fa-github fa-2x"
+                ></i
+              ></a>
+              <a
+                href="https://www.instagram.com/aleksandartepavcevic/"
+                target="_blank"
+                ><i
+                  class="home__icon home__icon--instagram fab fa-instagram fa-2x"
+                ></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/aleksandar-tepavcevic/"
+                target="_blank"
+                ><i
+                  class="home__icon home__icon--linkedin fab fa-linkedin-in fa-2x"
+                ></i
+              ></a>
+            </div>
           </div>
-          <img src="./images/crowdfund-project.png" alt="crowdfund-project" />
         </div>
       </div>
     </section>
     <script src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
