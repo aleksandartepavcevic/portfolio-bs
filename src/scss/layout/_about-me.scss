@@ -1,0 +1,12 @@
+.about-me {
+  padding: 20rem 0 35rem 0;
+  background: $dark-blue;
+  position: relative;
+
+  &__cards {
+    position: absolute;
+    bottom: -17rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

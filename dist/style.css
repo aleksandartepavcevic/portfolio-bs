@@ -1,9 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif; }
+
 .heading {
   font-weight: 500;
   font-size: 3.6rem;
   font-family: 'Poppins';
   color: #f3f3f3; }
+  .heading span {
+    color: #efa649; }
+  .heading--home {
+    margin-bottom: 1rem; }
+  .heading--about-me {
+    margin-bottom: 4rem;
+    max-width: 400px; }
+  .heading--technologies {
+    font-size: 2.4rem;
+    text-align: center; }
 
 .minor-heading {
   letter-spacing: 0.15em;
@@ -19,31 +38,8 @@
   font-family: 'Poppins';
   color: #f3f3f3;
   opacity: 0.7; }
-
-.cta {
-  font-size: 2.4rem;
-  font-weight: 600;
-  font-family: 'Poppins';
-  color: #f3f3f3;
-  text-decoration: none;
-  position: relative;
-  transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
-  .cta i {
-    margin-left: 1rem;
-    position: absolute;
-    color: #efa649;
-    left: 0;
-    bottom: 50%;
-    transform: translate(0, 50%);
-    opacity: 0;
-    transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
-  .cta:hover {
-    color: #efa649;
-    transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
-    .cta:hover i {
-      opacity: 1;
-      left: 100%;
-      transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
+  .paragraph--about-me {
+    margin-bottom: 5rem; }
 
 .home__nav-links {
   list-style-type: none; }
@@ -55,9 +51,9 @@
     font-weight: 600;
     font-size: 2.4rem;
     font-family: 'Poppins';
-    opacity: 0.25;
+    opacity: 0.15;
     position: relative;
-    transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
+    transition: all 400ms ease-out; }
     .home__nav-links li a::after {
       content: '';
       width: 1px;
@@ -126,16 +122,117 @@
   color: #f3f3f3;
   font-size: 7.2rem;
   font-weight: 700;
-  font-family: 'Poppins'; }
+  font-family: 'Poppins';
+  position: relative; }
+  .home__name-text::after {
+    content: '';
+    width: 8%;
+    height: 10px;
+    background-color: #efa649;
+    position: absolute;
+    left: 2px;
+    bottom: -40px; }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
+.about-me__technologies {
+  text-align: center; }
+  .about-me__technologies i {
+    font-size: 3.6rem;
+    color: #f3f3f3;
+    opacity: 0.1;
+    cursor: pointer;
+    transition: all 250ms ease-out; }
 
-html {
-  font-size: 62.5%;
-  font-family: 'Poppins', sans-serif; }
+.about-me .fa-html5:hover {
+  color: #efa649;
+  opacity: 0.7;
+  transition: all 250ms ease-in-out; }
+
+.about-me .fa-css3-alt:hover {
+  color: #0d71e4;
+  opacity: 0.7;
+  transition: all 250ms ease-in-out; }
+
+.about-me .fa-sass:hover {
+  color: #d64c98;
+  opacity: 0.7;
+  transition: all 250ms ease-in-out; }
+
+.about-me .fa-js-square:hover {
+  color: #ffc400;
+  opacity: 0.7;
+  transition: all 250ms ease-in-out; }
+
+.about-me .jquery-icon {
+  transition: all 250ms ease-in-out;
+  cursor: pointer; }
+  .about-me .jquery-icon:hover {
+    fill: #0d71e4;
+    fill-opacity: 0.7;
+    transition: all 250ms ease-in-out; }
+
+.about-me .fa-react:hover {
+  color: #0d71e4;
+  opacity: 0.7;
+  transition: all 250ms ease-in-out; }
+
+.about-me .fa-gulp:hover {
+  color: #ff4b4b;
+  opacity: 0.7;
+  transition: all 450ms ease-in-out; }
+
+.about-me .fa-bootstrap:hover {
+  color: #844fff;
+  opacity: 0.7;
+  transition: all 450ms ease-in-out; }
+
+.about-me .photoshop-icon {
+  transition: all 250ms ease-in-out;
+  cursor: pointer; }
+  .about-me .photoshop-icon:hover {
+    fill: #0d71e4;
+    fill-opacity: 0.7;
+    transition: all 250ms ease-in-out; }
+
+.about-me .xd-icon {
+  transition: all 250ms ease-in-out;
+  cursor: pointer; }
+  .about-me .xd-icon:hover {
+    fill: #fa4aab;
+    fill-opacity: 0.7;
+    transition: all 250ms ease-in-out; }
+
+.about-me__cards .fas {
+  margin-right: 2.5rem; }
+
+.cta {
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: 'Poppins';
+  color: #f3f3f3;
+  text-decoration: none;
+  position: relative;
+  transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
+  .cta i {
+    margin-left: 1rem;
+    position: absolute;
+    color: #efa649;
+    left: 0;
+    bottom: 50%;
+    transform: translate(0, 50%);
+    opacity: 0;
+    transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
+  .cta:hover {
+    color: #efa649;
+    transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
+    .cta:hover i {
+      opacity: 1;
+      left: 100%;
+      transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38); }
+
+.card {
+  background-color: #464a5a;
+  padding: 15rem 0;
+  max-width: 400px; }
 
 .home {
   padding: 20rem 0;
@@ -151,7 +248,7 @@ html {
     padding: 1rem 0; }
   .home__section {
     height: 80%;
-    padding-top: 10rem;
+    padding-top: 5rem;
     position: relative;
     z-index: 3; }
   .home__social-links a:not(:last-of-type) {
@@ -162,3 +259,28 @@ html {
     bottom: 0;
     left: 50%;
     transform: translate(-65%, 0); }
+
+.about-me {
+  padding: 20rem 0 35rem 0;
+  background: #1f212c;
+  position: relative; }
+  .about-me__cards {
+    position: absolute;
+    bottom: -17rem;
+    left: 50%;
+    transform: translate(-50%, 0); }
+
+.projects {
+  padding: 35rem 0 20rem 0;
+  background-color: #3d404f; }
+  .projects img {
+    max-width: 530px; }
+  .projects__fylo {
+    position: relative;
+    margin-top: 15rem; }
+  .projects__crowdfund {
+    position: relative; }
+  .projects__name {
+    position: absolute;
+    top: 100px;
+    left: 70px; }

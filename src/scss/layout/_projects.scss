@@ -1,0 +1,23 @@
+.projects {
+  padding: 35rem 0 20rem 0;
+  background-color: $blue;
+
+  img {
+    max-width: 530px;
+  }
+
+  &__fylo {
+    position: relative;
+    margin-top: 15rem;
+  }
+
+  &__crowdfund {
+    position: relative;
+  }
+
+  &__name {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+  }
+}

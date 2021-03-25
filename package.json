@@ -13,6 +13,11 @@
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
-    "gulp-terser": "^2.0.1"
+    "gulp-terser": "^2.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mozjpeg": "^7.0.0",
+    "optipng-bin": "^7.0.0",
+    "pngquant-bin": "^6.0.0"
   }
 }
