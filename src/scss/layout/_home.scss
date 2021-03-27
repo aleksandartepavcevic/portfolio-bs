@@ -63,6 +63,7 @@
 
     @media screen and (max-width: 425px) {
       margin-top: -15rem;
+      justify-content: flex-start;
 
       div:not(:last-of-type) {
         margin-bottom: 5rem;
