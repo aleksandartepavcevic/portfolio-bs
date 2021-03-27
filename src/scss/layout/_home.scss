@@ -8,7 +8,7 @@
   }
 
   @media screen and (max-width: 425px) {
-    padding: 2rem 0 15rem 0;
+    padding: 2rem 0 2rem 0;
   }
 
   &__header {
@@ -50,6 +50,24 @@
     padding-top: 5rem;
     position: relative;
     z-index: 3;
+
+    @media screen and (max-width: 425px) {
+      padding-top: 0;
+    }
+  }
+
+  &__introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: 425px) {
+      margin-top: -15rem;
+
+      div:not(:last-of-type) {
+        margin-bottom: 5rem;
+      }
+    }
   }
 
   &__social-links {
