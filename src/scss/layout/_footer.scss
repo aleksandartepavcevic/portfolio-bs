@@ -26,14 +26,10 @@
     }
 
     textarea {
-      resize: none;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+      height: auto;
+      max-height: 150px;
+      overflow-x: hidden;
+      overflow-y: hidden;
     }
 
     @media screen and (max-width: 768px) {

@@ -1,52 +1,46 @@
-$(window).on('beforeunload', function () {
-  $(window).scrollTop(0);
-});
+// function isScrolledIntoView(elem) {
+//   let docViewTop = $(window).scrollTop();
+//   let docViewBottom = docViewTop + $(window).height();
 
-$('a[href*="#"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function (event) {
-    if (
-      location.pathname.replace(/^\//, '') ==
-        this.pathname.replace(/^\//, '') &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate(
-          {
-            scrollTop: target.offset().top,
-          },
-          1000,
-          function () {
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(':focus')) {
-              return false;
-            }
-          }
-        );
-      }
-    }
-  });
+//   let elemTop = $(elem).offset().top;
+//   let elemBottom = elemTop + $(elem).height();
 
-function isScrolledIntoView(elem) {
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
+//   return elemBottom <= docViewBottom && elemTop >= docViewTop;
+// }
 
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
+// $(window).scroll(function () {
+//   $('.do-animation').each(function () {
+//     if (isScrolledIntoView(this) === true) {
+//       $(this).removeClass('do-animation');
+//       $(this).addClass('animate');
+//     }
+//   });
+// });
 
-  return elemBottom <= docViewBottom && elemTop >= docViewTop;
-}
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-$(window).scroll(function () {
-  $('.do-animation').each(function () {
-    if (isScrolledIntoView(this) === true) {
-      $(this).removeClass('do-animation');
-      $(this).addClass('animate');
-    }
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
   });
 });
+
+let autoExpand = (field) => {
+  field.style.height = 'auto';
+  field.style.height = field.scrollHeight + 2 + 'px';
+
+  if (field.style.height.replace('px', '') >= 150) {
+    field.style.overflowY = 'scroll';
+  } else field.style.overflowY = 'hidden';
+};
+
+document.addEventListener(
+  'input',
+  (event) => {
+    if (event.target.tagName.toLowerCase() !== 'textarea') return;
+    autoExpand(event.target);
+  },
+  false
+);

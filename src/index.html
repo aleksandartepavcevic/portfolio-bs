@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/182fea3d70.js"
       crossorigin="anonymous"
@@ -19,11 +14,12 @@
     <title>Aleksandar Tepavčević</title>
   </head>
   <body>
-    <!-- Home section -->
+    <div class="wrapper">
+      <!-- Home section -->
     <section class="home">
       <div class="home__header row container m-auto">
-        <nav class="col d-flex justify-content-between">
-          <div class="col-sm-8">
+        <nav class="col d-flex justify-content-between p-0">
+          <div class="col-sm-8 p-0">
             <a href="https://aleksandartepavcevic.github.io/"
               ><img src="./images/Logo.svg" alt="logo-icon"
             /></a>
@@ -98,7 +94,7 @@
             over many years.
           </p>
           <form method="get" action="./CV.docx">
-            <button type="submit" class="cta cta--button">Download CV <i class="far fa-hand-point-right"></i
+            <button type="submit" class="cta cta--button" id="workflow">Download CV <i class="far fa-hand-point-right"></i
               ></button>
           </form>
         </div>
@@ -171,7 +167,7 @@
         </div>
       </div>
       <div class="about-me__cards row container d-flex justify-content-between"
-      id="workflow">
+      >
         <div class="card col-sm">
           <h1 class="heading heading--technologies">
             <i class="fas fa-comments"></i>Tell Me Your Brief.
@@ -194,11 +190,9 @@
     <section class="projects" id="projects">
       <div class="row container m-auto">
         <div class="col">
-          <div class="row">
-            <h2 class="minor-heading">- Projects</h2>
+          <h2 class="minor-heading">- Projects</h2>
             <h1 class="heading">Successful Client Projects.</h1>
             <p class="paragraph">Feel free to check my portfolio</p>
-          </div>
         </div>
       </div>
       <div class="row container m-auto">
@@ -240,56 +234,55 @@
     <!-- Footer section -->
     <section class="footer" id="contact">
       <div class="row container m-auto d-flex justify-content-between">
-        <div class="row mb-5">
-          <div class="col-md d-flex flex-column ">
-            <div>
-              <h1 class="heading heading--footer">Let's talk.</h1>
-              <p class="paragraph">Open for any type of query & discussion.</p>
-            </div>
-            <div>
-              <p class="paragraph">
-                <a href="mailto: atepavcevic29@gmail.com"
-                  >atepavcevic29@gmail.com</a
-                >
-              </p>
-              <p class="paragraph">
-                <a href="tel: +381645114816">+381/64-511-48-16</a>
-              </p>
-            </div>
+        <div class="col-md d-flex flex-column ">
+          <div>
+            <h1 class="heading heading--footer">Let's talk.</h1>
+            <p class="paragraph">Open for any type of query & discussion.</p>
           </div>
-          <div class="footer__form col-md">
-            <h1 class="heading heading--footer">
-              Estimate your project? Let me know here.
-            </h1>
-            <form>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="What's your name?"
-              /><br />
-              <input
-                type="text"
-                id="mail"
-                name="mail"
-                placeholder="Your mail goes here."
-              /><br />
-              <textarea
-                name="message"
-                id="form-contact_message"
-                placeholder="What’s your message?"
-                rows="5"
-                required=""
-                class="autosize"
-              ></textarea>
-            </form>
+          <div>
+            <p class="paragraph">
+              <a href="mailto: atepavcevic29@gmail.com"
+                >atepavcevic29@gmail.com</a
+              >
+            </p>
+            <p class="paragraph">
+              <a href="tel: +381645114816">+381/64-511-48-16</a>
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div
-            class="col d-flex align-items-center justify-content-end flex-column"
-          >
-            <a href="https://aleksandartepavcevic.github.io/"
+        <div class="footer__form col-md">
+          <h1 class="heading heading--footer">
+            Estimate your project? Let me know here.
+          </h1>
+          <form>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="What's your name?"
+            /><br />
+            <input
+              type="text"
+              id="mail"
+              name="mail"
+              placeholder="Your mail goes here."
+            /><br />
+            <div id="contact-form">
+              <textarea
+              name="message"
+              id="message"
+              placeholder="What’s your message?"
+              rows="1"
+              required=""
+            ></textarea>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+      <div class="row container m-auto text-center pt-5">
+        <div class="col">
+          <a href="https://aleksandartepavcevic.github.io/"
               ><img src="./images/Logo.svg" alt="logo-icon"
             /></a>
             <p class="paragraph paragraph--footer">
@@ -316,10 +309,10 @@
                 ></i
               ></a>
             </div>
-          </div>
         </div>
       </div>
     </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./index.js"></script>
     
