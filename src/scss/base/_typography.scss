@@ -32,11 +32,11 @@ a:hover {
   &--technologies {
     font-size: $medium;
     text-align: center;
-    padding: 0 2rem;
+    // padding: 0 2rem;
 
     @media screen and (max-width: 991px) {
       text-align: left;
-      padding: 0 0.5rem;
+      // padding: 0 0.5rem;
     }
   }
 
@@ -80,6 +80,9 @@ a:hover {
 }
 
 .home {
+  a:focus-within {
+    outline: none;
+  }
   &__nav-links {
     list-style-type: none;
 
@@ -111,7 +114,9 @@ a:hover {
           transition: all 600ms cubic-bezier(0.35, -0.04, 0.23, 1.38);
           opacity: 0;
         }
-        &:hover {
+        &:hover,
+        &:focus-within {
+          outline: none;
           opacity: 1;
 
           &::after {
@@ -214,20 +219,6 @@ a:hover {
 
     @media screen and (max-width: 425px) {
       font-size: $medium-large;
-    }
-
-    &::after {
-      content: '';
-      width: 8%;
-      height: 10px;
-      background-color: $orange;
-      position: absolute;
-      left: 2px;
-      bottom: -40px;
-
-      @media screen and (max-width: 991px) {
-        height: 5px;
-      }
     }
   }
 }
@@ -349,21 +340,25 @@ a:hover {
     &::-webkit-input-placeholder {
       color: $white;
       font-weight: 300;
+      opacity: 0.5;
     }
 
     &::-moz-placeholder {
       color: $white;
       font-weight: 300;
+      opacity: 0.5;
     }
 
     &:-moz-placeholder {
       color: $white;
       font-weight: 300;
+      opacity: 0.5;
     }
 
     &:-ms-input-placeholder {
       color: $white;
       font-weight: 300;
+      opacity: 0.5;
     }
   }
 

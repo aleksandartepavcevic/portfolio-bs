@@ -12,17 +12,18 @@
   }
 
   &__form {
+    form {
+      min-height: 300px;
+    }
+
     input,
     textarea {
       width: 100%;
       background: transparent;
       outline: none;
       border: none;
+      border-radius: 0px;
       border-bottom: 1px solid hsla(0, 0%, 95%, 0.2);
-    }
-
-    input {
-      margin-bottom: 3rem;
     }
 
     textarea {
@@ -34,7 +35,40 @@
 
     @media screen and (max-width: 768px) {
       margin-top: 10rem;
-      margin-bottom: 10rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 3rem;
+
+    .input-line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background-color: $orange;
+      transition: all 600ms ease-in-out;
+
+      &--textarea {
+        bottom: 4px;
+      }
+    }
+
+    textarea:focus,
+    input:focus {
+      & + .input-line {
+        width: 100%;
+        transition: all 600ms ease-in-out;
+      }
+    }
+  }
+
+  &__end {
+    a:focus-within {
+      outline: none;
     }
   }
 }

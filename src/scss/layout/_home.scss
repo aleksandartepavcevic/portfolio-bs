@@ -1,5 +1,4 @@
 .home {
-  padding: 20rem 0;
   height: 100vh;
   background: $gradient-home;
 
@@ -8,11 +7,13 @@
   }
 
   @media screen and (max-width: 425px) {
-    padding: 2rem 0 2rem 0;
+    padding: 3rem 0 3rem 0;
   }
 
   &__header {
-    height: 20%;
+    @media screen and (max-width: 991px) {
+      height: unset;
+    }
   }
 
   &__nav {
@@ -46,9 +47,7 @@
   }
 
   &__section {
-    height: 80%;
     padding-top: 5rem;
-    position: relative;
     z-index: 3;
 
     @media screen and (max-width: 425px) {
@@ -56,13 +55,44 @@
     }
   }
 
-  &__introduction {
+  &__name-line {
+    width: 70px;
+    height: 7px;
+    background-color: $orange;
+    margin-top: 3rem;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+
+    @media screen and (max-width: 425px) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__content-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media screen and (max-width: 425px) {
-      margin-top: -15rem;
+      margin-top: 7rem;
+      margin-bottom: 5rem;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: 425px) {
       justify-content: flex-start;
 
       div:not(:last-of-type) {
@@ -80,8 +110,14 @@
 
     &--home {
       display: block;
+      margin-top: 15rem;
+
       @media screen and (max-width: 991px) {
         display: none;
+      }
+
+      @media screen and (max-height: 700px) {
+        margin-top: 5rem;
       }
     }
   }
@@ -91,9 +127,10 @@
       display: none;
     }
     img {
+      max-height: 750px !important;
       position: absolute;
       z-index: -1;
-      bottom: -20rem;
+      bottom: 0;
       left: 50%;
       transform: translate(-65%, 0);
 
@@ -103,6 +140,10 @@
 
       @media screen and (max-height: 800px) {
         height: 600px;
+      }
+
+      @media screen and (max-height: 700px) {
+        height: 500px;
       }
     }
   }
