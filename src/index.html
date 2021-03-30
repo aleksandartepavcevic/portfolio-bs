@@ -272,7 +272,12 @@
             <h1 class="heading heading--footer">
               Estimate your project? Let me know here.
             </h1>
-            <form>
+            <form
+              id="contact-form"
+              method="POST"
+              action="send"
+              enctype="multipart/form-data"
+            >
               <div class="footer__field">
                 <input
                   type="text"
@@ -297,6 +302,17 @@
                 <span class="input-line"></span>
               </div>
               <br />
+              <div class="footer__field">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  autocomplete="off"
+                  placeholder="Subject."
+                />
+                <span class="input-line"></span>
+              </div>
+              <br />
               <div class="footer__field" id="contact-form">
                 <textarea
                   name="message"
@@ -307,7 +323,11 @@
                 ></textarea>
                 <span class="input-line input-line--textarea"></span>
               </div>
-              <button type="submit" class="cta cta--button cta--send">
+              <button
+                type="submit"
+                value="submit"
+                class="cta cta--button cta--send"
+              >
                 Send <i class="fas fa-paper-plane"></i>
               </button>
             </form>

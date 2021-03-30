@@ -17,6 +17,24 @@
 //   });
 // });
 
+const form = document.getElementById('contact-form');
+
+const formEvent = form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  let mail = new FormData(form);
+  sendMail(mail);
+});
+
+const sendMail = (mail) => {
+  fetch('http://aleksandartepavcevic.github.io/send', {
+    method: 'post',
+    body: 'mail',
+  }).then((response) => {
+    return response.json();
+  });
+};
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
