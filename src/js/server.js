@@ -37,7 +37,7 @@ app.post('/send', (req, res) => {
   form.parse(req, function (err, fields) {
     console.log(fields);
     Object.keys(fields).forEach(function (property) {
-      (data[property] = fields[property]), toString();
+      data[property] = fields[property].toString();
     });
 
     const mail = {

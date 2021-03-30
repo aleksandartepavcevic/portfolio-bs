@@ -34,10 +34,7 @@ function imgTask() {
 }
 
 function jsTask() {
-  return src('./src/js/*.js')
-    .pipe(concat('index.js'))
-    .pipe(terser())
-    .pipe(dest('./dist', { sourcemaps: '.' }));
+  return src('./src/js/*.js').pipe(terser()).pipe(dest('./dist'));
 }
 
 function start() {
