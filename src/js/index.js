@@ -27,7 +27,7 @@ const formEvent = form.addEventListener('submit', (event) => {
 });
 
 const sendMail = (mail) => {
-  fetch('http://aleksandartepavcevic.github.io/send', {
+  fetch('https://aleksandartepavcevic.github.io/send', {
     method: 'post',
     body: 'mail',
   }).then((response) => {
