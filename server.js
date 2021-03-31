@@ -10,24 +10,26 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 
-mongoose.connect(
-  process.env.MONGODB_URI,
-  {
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
-    replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
-  },
-  function (err) {
-    if (err) return console.log('Error: ', err);
-    console.log(
-      'MongoDB Connection -- Ready state is:',
-      mongoose.connection.readyState
-    );
-  }
-);
+app.use(express.static('public'));
+
+// mongoose.connect(
+//   process.env.MONGODB_URI,
+//   {
+//     useFindAndModify: false,
+//     useUnifiedTopology: true,
+//     useNewUrlParser: true,
+//     useCreateIndex: true,
+//     server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+//     replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+//   },
+//   function (err) {
+//     if (err) return console.log('Error: ', err);
+//     console.log(
+//       'MongoDB Connection -- Ready state is:',
+//       mongoose.connection.readyState
+//     );
+//   }
+// );
 
 app.route('/').get(function (req, res) {
   res.sendFile(process.cwd() + '/index.html');
@@ -41,6 +43,7 @@ app.listen(PORT, () => {
 const transpoter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
+  secure: false,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
