@@ -307,6 +307,45 @@ a:hover {
   .card:not(:last-of-type) {
     margin-right: 1.5rem; }
 
+.menu {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1f212c;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in-out; }
+  .menu__nav-links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+    .menu__nav-links ul {
+      list-style-type: none; }
+      .menu__nav-links ul li:not(:last-of-type) {
+        margin-bottom: 2rem; }
+      .menu__nav-links ul li a {
+        color: #f3f3f3;
+        text-decoration: none;
+        font-size: 2.4rem; }
+  .menu i {
+    position: absolute;
+    top: 9rem;
+    right: 1.5rem;
+    font-size: 2.4rem;
+    color: #f3f3f3; }
+    @media screen and (max-width: 425px) {
+      .menu i {
+        top: 4rem; } }
+  .menu.opened {
+    visibility: visible;
+    opacity: 1;
+    transition: all 300ms ease-in-out; }
+
 .home {
   height: 100vh;
   background: radial-gradient(100% 100% at 50% 0%, #464a5a 0%, #252734 100%); }
@@ -365,6 +404,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+    @media screen and (max-width: 991px) {
+      .home__content-left {
+        margin-bottom: 5rem;
+        justify-content: space-evenly; } }
     @media screen and (max-width: 425px) {
       .home__content-left {
         margin-top: 7rem;
@@ -422,6 +465,8 @@ a:hover {
       margin-top: 10rem;
       text-align: left; } }
   .about-me__cards {
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom: -17rem;
     left: 50%;
@@ -439,7 +484,7 @@ a:hover {
   .projects__fylo {
     position: relative;
     margin-top: 15rem; }
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 768px) {
       .projects__fylo {
         margin-top: 3.5rem;
         margin-bottom: 3.5rem; } }
@@ -478,7 +523,7 @@ a:hover {
       padding: 5rem 0;
       height: unset; } }
   .footer__form form {
-    min-height: 300px; }
+    min-height: 420px; }
   .footer__form input,
   .footer__form textarea {
     width: 100%;

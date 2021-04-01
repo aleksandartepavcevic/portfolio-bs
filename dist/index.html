@@ -36,9 +36,19 @@
                   <li><a href="#workflow">workflow</a></li>
                   <li><a href="#projects">projects</a></li>
                 </ul>
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" id="hamburger-menu"></i>
               </div>
             </nav>
+            <div class="menu container mx-auto">
+              <div class="menu__nav-links">
+                <ul>
+                  <li><a href="#about-me" id="about-me-link">about me</a></li>
+                  <li><a href="#workflow" id="workflow-link">workflow</a></li>
+                  <li><a href="#projects" id="projects-link">projects</a></li>
+                </ul>
+                <i class="fas fa-times" id="menu-exit"></i>
+              </div>
+            </div>
           </div>
           <div class="home__section row container mx-auto">
             <div class="home__content-left col-lg-8">
@@ -183,9 +193,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="about-me__cards row container d-flex justify-content-between"
-        >
+        <div class="about-me__cards row container m-auto">
           <div class="card col-sm">
             <h1 class="heading heading--technologies">
               <i class="fas fa-comments"></i>Tell Me Your Brief.

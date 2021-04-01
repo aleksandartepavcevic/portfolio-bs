@@ -62,3 +62,30 @@ document.addEventListener(
   },
   false
 );
+
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const menuExit = document.getElementById('menu-exit');
+const menu = document.querySelector('.menu');
+const aboutMe = document.getElementById('about-me-link');
+const workflow = document.getElementById('workflow-link');
+const projects = document.getElementById('projects-link');
+
+hamburgerMenu.addEventListener('click', () => {
+  menu.classList.toggle('opened');
+});
+
+menuExit.addEventListener('click', () => {
+  menu.classList.toggle('opened');
+});
+
+aboutMe.addEventListener('click', () => {
+  menu.classList.toggle('opened');
+});
+
+workflow.addEventListener('click', () => {
+  menu.classList.toggle('opened');
+});
+
+projects.addEventListener('click', () => {
+  menu.classList.toggle('opened');
+});
