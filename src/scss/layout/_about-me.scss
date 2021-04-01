@@ -21,9 +21,14 @@
     bottom: -17rem;
     left: 50%;
     transform: translate(-50%, 0);
+    padding: 0 30px;
 
-    @media screen and (max-width: 991px) {
-      visibility: hidden;
+    @media screen and (max-width: 1130px) {
+      overflow-x: scroll;
+    }
+
+    @media screen and (max-width: 425px) {
+      bottom: -15rem;
     }
   }
 }

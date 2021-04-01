@@ -302,10 +302,21 @@ a:hover {
 
 .card {
   background-color: #464a5a;
-  padding: 15rem 0;
-  max-width: 400px; }
+  width: 400px;
+  min-width: 350px;
+  height: 350px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .card:not(:last-of-type) {
     margin-right: 1.5rem; }
+  @media screen and (max-width: 425px) {
+    .card {
+      width: 300px;
+      height: 300px; }
+      .card h1 {
+        font-size: 1.8rem; } }
 
 .menu {
   position: fixed;
@@ -470,10 +481,14 @@ a:hover {
     position: absolute;
     bottom: -17rem;
     left: 50%;
-    transform: translate(-50%, 0); }
-    @media screen and (max-width: 991px) {
+    transform: translate(-50%, 0);
+    padding: 0 30px; }
+    @media screen and (max-width: 1130px) {
       .about-me__cards {
-        visibility: hidden; } }
+        overflow-x: scroll; } }
+    @media screen and (max-width: 425px) {
+      .about-me__cards {
+        bottom: -15rem; } }
 
 .projects {
   padding: 35rem 0 20rem 0;
