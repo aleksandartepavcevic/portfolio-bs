@@ -502,7 +502,7 @@ a:hover {
     @media screen and (max-width: 768px) {
       .projects__fylo {
         margin-top: 3.5rem;
-        margin-bottom: 3.5rem; } }
+        margin-bottom: 6.5rem; } }
   .projects__crowdfund {
     position: relative; }
     .projects__crowdfund--absolute {
@@ -519,13 +519,38 @@ a:hover {
         .projects__crowdfund--absolute {
           position: relative;
           padding-left: 0; } }
+  .projects__shortly {
+    position: relative;
+    margin-top: 6.5rem; }
   .projects__name {
     position: absolute;
     top: 40px;
-    padding-left: 5rem; }
+    padding-left: 4rem; }
     @media screen and (max-width: 425px) {
       .projects__name {
         padding-left: 2.5rem; } }
+  .projects__hover-text {
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease; }
+    .projects__hover-text h2 {
+      margin-bottom: 0; }
+    .projects__hover-text span {
+      margin: 0 8px;
+      width: 2px;
+      height: 25px;
+      opacity: 0.5;
+      background-color: #f3f3f3; }
+
+@media screen and (min-width: 1024px) {
+  .hovered .projects__hover-text {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 20px;
+    transition: all 300ms ease; } }
 
 .footer {
   padding: 20rem 0;

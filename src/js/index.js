@@ -89,3 +89,40 @@ workflow.addEventListener('click', () => {
 projects.addEventListener('click', () => {
   menu.classList.toggle('opened');
 });
+
+const project = document.getElementById('project');
+const project2 = document.getElementById('project2');
+const project3 = document.getElementById('project3');
+const project4 = document.getElementById('project4');
+
+project.addEventListener('mouseenter', () => {
+  project.classList.add('hovered');
+});
+
+project.addEventListener('mouseleave', () => {
+  project.classList.remove('hovered');
+});
+
+project2.addEventListener('mouseenter', () => {
+  project2.classList.add('hovered');
+});
+
+project2.addEventListener('mouseleave', () => {
+  project2.classList.remove('hovered');
+});
+
+project3.addEventListener('mouseenter', () => {
+  project3.classList.add('hovered');
+});
+
+project3.addEventListener('mouseleave', () => {
+  project3.classList.remove('hovered');
+});
+
+project4.addEventListener('mouseenter', () => {
+  project4.classList.add('hovered');
+});
+
+project4.addEventListener('mouseleave', () => {
+  project4.classList.remove('hovered');
+});
